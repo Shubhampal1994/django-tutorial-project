@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Users</title>
+	</head>
+	<body>
+		<h2>Here are your Users:</h2>
+		{% if user_details %}
+		<!-- <dl>
+			{% for user in user_details %}
+				<dt>{{ user.pk }}. User Info</dt>
+					<dd>First Name: {{ user.first_name }}</dd>
+					<dd>Last Name: {{ user.last_name }}</dd>
+					<dd>Email: {{ user.email }}</dd>
+			{% endfor %}
+		</dl> -->
+
+		<ol>
+			{% for person in user_details %}
+			<li>User Info</li>
+				<ul>
+					<li>First Name: {{ person.first_name }}</li>
+					<li>Last Name: {{ person.last_name }}</li>
+					<li>Email: {{ person.email }}</li>
+				</ul>
+			{% endfor %}
+		</ol>
+		{% else %}
+			<p>No USERS Found!</p>
+		{% endif %}
+	</body>
+</html>
