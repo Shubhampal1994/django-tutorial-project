@@ -25,5 +25,3 @@ class SchoolListView(ListView):
 class SchoolDetailView(DetailView):
 	model = models.School
 	template_name = 'basic_app/School_detail.html'
-
-# This is test push
